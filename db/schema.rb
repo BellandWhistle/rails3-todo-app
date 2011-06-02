@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20110602140558) do
   create_table "tasks", :force => true do |t|
     t.integer  "project_id"
     t.string   "description"
-    t.string   "state"
+    t.string   "state",       :default => "initial"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

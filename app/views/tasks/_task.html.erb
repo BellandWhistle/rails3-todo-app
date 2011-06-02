@@ -1,5 +1,5 @@
-<div id='task-<%= task.id %>'>
-  <%= task.description%>
+<div id='task-<%= task.id %>' class='task'>
+  <p><%= task.description%></p>
   <%= form_for(task, :remote => true) do |f| %>
     <%= f.select :state, Task::STATES %>
     <%= f.submit %>

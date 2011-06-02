@@ -2,8 +2,8 @@ class CreateTasks < ActiveRecord::Migration
   def self.up
     create_table :tasks do |t|
       t.references :project
-      t.string :description, :default => 'initial'
-      t.string :state
+      t.string :description
+      t.string :state, :default => 'initial'
 
       t.timestamps
     end
